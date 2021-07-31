@@ -17,7 +17,6 @@ function setup() {
     cnv.style('display', 'block');
     background(0);
     noiseDetail(4, .95);
-
     // Set the size of the bubble relative to the size of the browser window
     reScale();
 }
@@ -26,7 +25,7 @@ function draw() {
     z += 0.004;
     background(0);
     translate(width / 2, height / 2);
-    stroke(255);
+    stroke(255, 200);
     strokeWeight(1.5);
     noFill();
     // Create the bubble using 2D perlin noise
@@ -58,6 +57,11 @@ function reScale() {
 
 function windowResized() {
     // Make the bubble look nicer if the window is resized
-    resizeCanvas(windowWidth, windowHeight * canvasScaleY);
+    if(canvasScaleY == 0) {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+    else {
+        resizeCanvas(windowWidth, windowHeight * canvasScaleY);
+    }
     reScale();
 }

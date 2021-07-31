@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 100%;
+    background-color: black;
 }
 
 @font-face {
