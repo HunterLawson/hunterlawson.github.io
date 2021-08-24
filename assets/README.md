@@ -1,0 +1,1 @@
+# This is the assets folder, put your assets (images, CSS, etc.) in here
