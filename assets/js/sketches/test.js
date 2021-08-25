@@ -6,9 +6,8 @@ function setup() {
     // for some reason the height is always around 100 pixels shorter?? add 100
     var canvas = createCanvas(div.offsetWidth, div.offsetHeight + 100);
     canvas.parent('canvas-container');
-
-    x = random(width);
-    y = random(height);
+    x = width/2;
+    y = height/2;
     xSpeed = random(-10, 10);
     ySpeed = random(-10, 10);
 }
@@ -29,5 +28,4 @@ function draw() {
 function windowResized() {
     div = document.getElementById('canvas-container');
     resizeCanvas(div.offsetWidth, div.offsetHeight);
-    canvas.position(0, 0 ,'relative');
 }
