@@ -80,6 +80,7 @@ class GameOfLife extends SketchBase {
     }
 
     reload() {
+        this.cells = [];
         for(let i = 0; i < this.rows; i ++) {
             let row = [];
             for(let j = 0; j < this.cols; j ++) {
