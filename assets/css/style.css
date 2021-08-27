@@ -27,14 +27,14 @@ body {
 }
 
 h1 {
-    font-family: Roboto-Regular;
+    font-family:'Courier New', Courier, monospace;
     letter-spacing: 0.5rem;
     font-weight: normal;
     text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: Roboto-Light;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.1rem;
     font-weight: normal;
     color:rgb(156, 156, 156);
@@ -65,7 +65,7 @@ a {
 }
 
 .navbar-navigation > li > a {
-    font-family: Roboto-Light;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.2rem;
     font-size: 100%;
 }
@@ -85,5 +85,9 @@ a {
 }
 
 .socials {
+    background:rgba(29, 29, 29, 0.651);
     position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
 }

@@ -10,7 +10,7 @@ class SketchBase {
     show() {
     }
 
-    resised() {
+    reload() {
         
     }
 }
