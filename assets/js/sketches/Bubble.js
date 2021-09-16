@@ -24,11 +24,11 @@ class Bubble extends SketchBase {
     }
 
     show() {
-        background(17, 17, 17);
+        background(240);
 
         angleMode(RADIANS);
         translate(width / 2, height / 2);
-        stroke(255, 200);
+        stroke(29, 200);
         strokeWeight(1.5);
         noFill();
         for(let j = 0; j < this.numBubbles; j ++) {

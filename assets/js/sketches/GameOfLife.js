@@ -64,15 +64,14 @@ class GameOfLife extends SketchBase {
     }
 
     show() {
-        background(17, 17, 17);
         noStroke();
         for(let y = 0; y < this.rows; y ++) {
             for(let x = 0; x < this.cols; x ++) {
                 let rectX = this.cellSize * x;
                 let rectY = this.cellSize * y;
-                fill(17, 17, 17);
+                fill(240);
                 if(this.cells[y][x]) {
-                    fill(200);
+                    fill(50);
                 }
                 rect(rectX, rectY, this.cellSize, this.cellSize);
             }

@@ -11,13 +11,13 @@ class MaurerRose extends SketchBase {
     }
 
     show() {
-        background(17, 17, 17);
+        background(240);
         
         angleMode(DEGREES);
         translate(width/2, height/2);
         scale(30);
         noFill();
-        stroke(255);
+        stroke(29);
         strokeWeight(0.03);
 
         beginShape();

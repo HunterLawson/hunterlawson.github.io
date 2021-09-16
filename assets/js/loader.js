@@ -5,15 +5,17 @@ var sketchTimeout = 400;
 var transition = 0;
 
 function setup() {
-    // for some reason the height is always around 100 pixels shorter?? add 100
     let div = document.getElementById('canvas-container');
-    let canvas = createCanvas(div.offsetWidth, div.offsetHeight + 100);
+    let canvas = createCanvas(div.offsetWidth, div.offsetHeight);
     canvas.parent('canvas-container');
+    canvas.style('position', 'absolute');
+    canvas.style('z-index', '-1');
     // Add all sketches to the sketches array
     sketches.push(new Bubble());
     sketches.push(new MaurerRose());
     sketches.push(new FlowField());
     sketches.push(new GameOfLife());
+    sketches.push(new MultiplicationCircle());
     // Randomly pick one to use
     sketch = random(sketches);
     sketch.reload();
@@ -36,7 +38,7 @@ function draw() {
         case 1:
             sketch.update();
             sketch.show();
-            background(17, 17, 17, timer);
+            background(240, timer);
             if(timer >= 255) {
                 timer = 0;
                 transition = 2;
@@ -51,7 +53,7 @@ function draw() {
         case 2:
             sketch.update();
             sketch.show();
-            background(17, 17, 17, 255 - timer);
+            background(240, 255 - timer);
             if(timer >= 255) {
                 timer = 0;
                 transition = 0;
@@ -63,4 +65,9 @@ function draw() {
 function windowResized() {
     let div = document.getElementById('canvas-container');
     resizeCanvas(div.offsetWidth, div.offsetHeight);
+}
+
+function changeSketch() {
+    timer = 0;
+    transition = 2;
 }

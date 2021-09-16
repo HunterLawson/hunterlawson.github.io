@@ -18,11 +18,11 @@ class FlowField extends SketchBase {
     }
 
     show() {
-        background(17, 17, 17);
+        background(240);
         
         angleMode(RADIANS);
         strokeWeight(3);
-        stroke(255, 255, 255, 80);
+        stroke(29, 80);
         for(let i = 0; i < this.particleCount; i ++) {
             let n = noise(this.particles[i].x / this.noiseScale,
                           this.particles[i].y / this.noiseScale, this.z);
